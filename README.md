@@ -1,3 +1,17 @@
+# Mites.io fork
+
+This fork adds configuration for Docker/Podman.
+This is tested with Podman and podman-compose on Ubuntu 24.04 (install using `sudo apt install podman podman-compose`).
+
+Run with
+
+```
+$ podman compose build
+$ podman compose run --service spark-server
+```
+
+Note that you will need to generate server keys using openssl or by running the server in a container and copying the keys out into the folder; due to limitations with bind mounts, I could not easily have the keys generate inside a bind-mounted folder.
+
 spark-server
 ============
 

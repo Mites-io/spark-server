@@ -1,0 +1,11 @@
+services:
+  spark-server:
+    build: .
+    volumes:
+      - ./core_keys:/app/core_keys
+      - ./users:/app/users
+      - ./server_keys/default_key.pem:/app/default_key.pem
+      - ./server_keys/default_key.pub.pem:/app/default_key.pub.pem
+    ports:
+      - "8080:8080"
+      - "5683:5683"

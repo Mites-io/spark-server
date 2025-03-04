@@ -25,8 +25,10 @@ build/Release
 node_modules
 
 # Spark generated files/directories which contain secrets
-core_keys
-users
-*.der
-*.pem
-*.pub.pem
+# But keep the readme files
+core_keys/*
+!core_keys/README.md
+server_keys/*
+!server_keys/README.md
+users/*
+!users/README.md
