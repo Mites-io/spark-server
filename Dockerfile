@@ -1,4 +1,12 @@
-FROM node:8
+FROM docker.io/node:8-buster-slim
+
+ENV DEBIAN_FRONTEND=noninteractive
+
+RUN apt-get -q --no-allow-insecure-repositories update \
+  && apt-get -y upgrade \
+  && apt-get install -y --no-install-recommends \
+  build-essential git make python3 \
+  && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /app
 

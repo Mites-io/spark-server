@@ -1,9 +1,9 @@
 # Mites.io fork
 
 This fork adds configuration for Docker/Podman.
-This is tested with Podman and podman-compose on Ubuntu 24.04 (install using `sudo apt install podman podman-compose`).
+This is tested with Podman on Ubuntu 24.04 (install using `sudo apt install podman podman-compose`).
 
-Run with
+Run using podman-compose:
 
 ```
 $ podman compose build
